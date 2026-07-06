@@ -1,0 +1,54 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 50, 99, 0.6); /* Deep Navy semi-transparent */
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Above everything */
+  padding: 20px;
+}
+
+.modal {
+  background: var(--bg-main); /* Sand */
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--body-text);
+  cursor: pointer !important; /* Force pointer for UX */
+  transition: color 0.2s ease;
+}
+
+.closeBtn:hover {
+  color: var(--warm-highlight);
+}
+
+.title {
+  color: var(--heading-text);
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.content {
+  color: var(--body-text);
+  font-size: 16px;
+  line-height: 1.6;
+}

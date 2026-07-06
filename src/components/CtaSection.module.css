@@ -1,0 +1,67 @@
+.section {
+  padding: 80px 0;
+}
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  color: var(--heading-text);
+  padding: 60px 40px;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.card h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.card p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.buttons {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.buttons a {
+  transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
