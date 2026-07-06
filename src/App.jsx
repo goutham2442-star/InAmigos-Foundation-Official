@@ -11,6 +11,7 @@ import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import Modal from './components/Modal';
+import Preloader from './components/Preloader';
 
 export const ModalContext = createContext();
 
@@ -22,10 +23,7 @@ function App() {
   const { scrollYProgress } = useScroll();
 
   useEffect(() => {
-    // Simulate loading for premium reveal effect
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
+    // Preloader handles setLoading(false) via onComplete
 
     const handleScroll = () => {
       if (window.scrollY > 400) {
@@ -37,7 +35,6 @@ function App() {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      clearTimeout(timer);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -60,33 +57,7 @@ function App() {
         content={modalContent.content}
       />
       
-      <AnimatePresence>
-        {loading && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            style={{
-              position: 'fixed',
-              top: 0, left: 0, right: 0, bottom: 0,
-              backgroundColor: 'var(--bg-main)',
-              zIndex: 99999,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              flexDirection: 'column'
-            }}
-          >
-            <motion.img 
-              src="https://inamigosfoundation.org.in/public/storage/settings/1744214680.jpg"
-              alt="Loading"
-              style={{ width: '120px', borderRadius: '50%' }}
-              animate={{ opacity: [0.5, 1, 0.5], scale: [0.95, 1.05, 0.95] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Preloader onComplete={() => setLoading(false)} />
 
       <motion.div
         style={{

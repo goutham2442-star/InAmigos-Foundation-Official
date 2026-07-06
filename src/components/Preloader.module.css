@@ -1,0 +1,61 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inner {
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+
+.line {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.char {
+  display: inline-block;
+  white-space: pre;
+}
+
+.tagline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--primary-green);
+  margin-top: 30px;
+}
+
+/* Mask layers to split the screen apart when done */
+.mask {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--bg-dark);
+  z-index: 3;
+}
+
+.maskLeft {
+  left: 0;
+  transform-origin: left;
+}
+
+.maskRight {
+  right: 0;
+  transform-origin: right;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ImpactSection.module.css';
 import { motion } from 'framer-motion';
 import { Users, Map, HeartHandshake } from 'lucide-react';
+import Counter from './Counter';
 
 const ImpactSection = () => {
   return (
@@ -30,17 +31,17 @@ const ImpactSection = () => {
         >
           <div className={styles.statItem}>
             <Users className={styles.featureIcon} size={48} color="white" />
-            <span className={styles.number}>50,000+</span>
+            <span className={styles.number}><Counter from={0} to={50000} suffix="+" /></span>
             <span className={styles.label}>Beneficiaries Reached</span>
           </div>
           <div className={styles.statItem}>
             <Map className={styles.featureIcon} size={48} color="white" />
-            <span className={styles.number}>28</span>
+            <span className={styles.number}><Counter from={0} to={28} /></span>
             <span className={styles.label}>States Covered</span>
           </div>
           <div className={styles.statItem}>
             <HeartHandshake className={styles.featureIcon} size={48} color="white" />
-            <span className={styles.number}>200+</span>
+            <span className={styles.number}><Counter from={0} to={200} suffix="+" /></span>
             <span className={styles.label}>Active Volunteers</span>
           </div>
         </motion.div>

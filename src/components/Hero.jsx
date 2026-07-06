@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import MagneticButton from './MagneticButton';
 
 const backgroundImages = [
   "https://inamigosfoundation.org.in/public/storage/events/1738238109.jpg",
@@ -92,8 +93,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.5 }}
           >
-            <a href="#projects" className="btn-primary">Our Projects</a>
-            <a href="https://inamigosfoundation.org.in/became-volunteer" target="_blank" rel="noreferrer" className="btn-outline" style={{ borderColor: 'white', color: 'white' }}>Join as Volunteer</a>
+            <MagneticButton href="#projects" className="btn-primary">Our Projects</MagneticButton>
+            <MagneticButton href="https://inamigosfoundation.org.in/became-volunteer" target="_blank" rel="noreferrer" className="btn-outline" style={{ borderColor: 'white', color: 'white' }}>Join as Volunteer</MagneticButton>
           </motion.div>
         </motion.div>
       </div>

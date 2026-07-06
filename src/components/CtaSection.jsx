@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styles from './CtaSection.module.css';
 import { motion } from 'framer-motion';
 import { ModalContext } from '../App';
-
+import MagneticButton from './MagneticButton';
 const CtaSection = () => {
   const { setIsModalOpen, setModalContent } = useContext(ModalContext);
 
@@ -49,12 +49,12 @@ const CtaSection = () => {
             Whether you want to volunteer on the ground, join our remote internship program, or support our campaigns financially, there is a place for you in the InAmigos family.
           </p>
           <div className={styles.buttons}>
-            <a href="https://inamigosfoundation.org.in/became-volunteer" target="_blank" rel="noreferrer" className="btn-primary" style={{ textDecoration: 'none', padding: '12px 32px' }}>
+            <MagneticButton href="https://inamigosfoundation.org.in/became-volunteer" target="_blank" rel="noreferrer" className="btn-primary" style={{ textDecoration: 'none', padding: '12px 32px' }}>
               Join as Volunteer
-            </a>
-            <a href="https://pages.razorpay.com/pl_H621G6ea64ZMl7/view" target="_blank" rel="noreferrer" className="btn-outline" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)', textDecoration: 'none', padding: '12px 32px' }}>
+            </MagneticButton>
+            <MagneticButton href="https://pages.razorpay.com/pl_H621G6ea64ZMl7/view" target="_blank" rel="noreferrer" className="btn-outline" style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)', textDecoration: 'none', padding: '12px 32px' }}>
               Donate Now
-            </a>
+            </MagneticButton>
           </div>
         </motion.div>
       </div>

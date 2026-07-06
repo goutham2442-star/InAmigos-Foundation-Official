@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import styles from './Navbar.module.css';
 import { Menu, X } from 'lucide-react';
 import { ModalContext } from '../App';
-
+import MagneticButton from './MagneticButton';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -64,7 +64,7 @@ const Navbar = () => {
         </nav>
 
         <div className={styles.actions}>
-          <a href="https://pages.razorpay.com/pl_H621G6ea64ZMl7/view" target="_blank" rel="noreferrer" className="btn-primary" style={{ padding: '10px 24px', textDecoration: 'none' }}>Donate Now</a>
+          <MagneticButton href="https://pages.razorpay.com/pl_H621G6ea64ZMl7/view" target="_blank" rel="noreferrer" className="btn-primary" style={{ padding: '10px 24px', textDecoration: 'none' }}>Donate Now</MagneticButton>
           <button className={styles.mobileToggle} onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
