@@ -1,4 +1,4 @@
-# InAmigos Foundation - Official Website 🌟
+# InAmigos Foundation - Official Webpage 🌟
 
 Welcome to the official web platform of the **InAmigos Foundation**, a Section 8 registered non-profit organization licensed by the Central Government of India, headquartered in Chhattisgarh.
 
