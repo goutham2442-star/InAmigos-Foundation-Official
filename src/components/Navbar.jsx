@@ -47,7 +47,7 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           <img 
-            src="/logo.jpg" 
+            src="./logo.jpg" 
             alt="InAmigos Foundation Logo" 
             className={styles.logoImg}
           />

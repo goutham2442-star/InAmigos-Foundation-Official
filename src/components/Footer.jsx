@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={`container ${styles.container}`}>
         
         <div className={styles.brandInfo}>
-          <img src="/logo.jpg" alt="InAmigos Foundation" className={styles.logo} />
+          <img src="./logo.jpg" alt="InAmigos Foundation" className={styles.logo} />
           <p className={styles.description}>
             A Section 8 Non-Profit Organization dedicated to community development, women empowerment, education, and environmental sustainability. Registered under 80G, 12A, CSR-1, and ISO 9001:2015.
           </p>
