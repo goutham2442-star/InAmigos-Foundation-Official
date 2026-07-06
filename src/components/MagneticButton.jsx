@@ -25,6 +25,8 @@ export default function MagneticButton({ children, className, ...props }) {
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x: position.x, y: position.y }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={className}
       style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}

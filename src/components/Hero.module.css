@@ -68,7 +68,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(26, 50, 99, 0.7); /* Deep Navy semi-transparent */
+  background: rgba(26, 50, 99, 0.4); /* Deep Navy semi-transparent */
   z-index: 1;
 }
 

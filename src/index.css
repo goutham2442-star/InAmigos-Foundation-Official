@@ -127,7 +127,6 @@ section {
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-glow);
   background: #E5A344; /* Darker Golden */
 }
@@ -141,7 +140,6 @@ section {
 .btn-outline:hover {
   background: var(--primary-blue);
   color: white;
-  transform: translateY(-4px);
   box-shadow: 0 4px 15px rgba(26, 50, 99, 0.3);
 }
 
