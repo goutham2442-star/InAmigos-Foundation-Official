@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: var(--bg-dark);
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #064e3b 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,22 +40,13 @@
   margin-top: 30px;
 }
 
-/* Mask layers to split the screen apart when done */
-.mask {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: var(--bg-dark);
-  z-index: 3;
+.iconContainer {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
 }
 
-.maskLeft {
-  left: 0;
-  transform-origin: left;
-}
-
-.maskRight {
-  right: 0;
-  transform-origin: right;
+.globeIcon {
+  color: #4ade80;
+  filter: drop-shadow(0 0 15px rgba(74, 222, 128, 0.6));
 }

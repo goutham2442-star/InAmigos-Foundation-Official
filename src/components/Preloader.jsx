@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Globe } from 'lucide-react';
 import styles from './Preloader.module.css';
 
-const line1 = "Small acts.";
-const line2 = "Massive ripples.";
+const line1 = "A single spark.";
+const line2 = "Igniting change.";
 
 const container = {
   hidden: { opacity: 1 },
@@ -55,6 +56,15 @@ export default function Preloader({ onComplete }) {
           exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
         >
           <div className={styles.inner}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1, type: "spring", bounce: 0.5 }}
+              className={styles.iconContainer}
+            >
+              <Globe size={64} className={styles.globeIcon} />
+            </motion.div>
+
             <motion.div 
               className={styles.line}
               variants={container}
@@ -91,14 +101,6 @@ export default function Preloader({ onComplete }) {
             </motion.div>
           </div>
           
-          <motion.div 
-            className={`${styles.mask} ${styles.maskLeft}`}
-            exit={{ scaleX: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
-          />
-          <motion.div 
-            className={`${styles.mask} ${styles.maskRight}`}
-            exit={{ scaleX: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
-          />
         </motion.div>
       )}
     </AnimatePresence>
